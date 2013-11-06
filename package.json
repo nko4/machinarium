@@ -1,0 +1,19 @@
+{
+  "name": "nko4-machinarium",
+  "version": "0.0.0",
+  "description": "Machinarium",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nko4/machinarium.git"
+  },
+  "dependencies": {
+    "nko": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}

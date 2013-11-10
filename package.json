@@ -1,7 +1,7 @@
 {
-  "name": "nko4-machinarium",
-  "version": "0.0.0",
-  "description": "Machinarium",
+  "name": "Webcam Space Invaders",
+  "version": "0.0.1",
+  "description": "Machinarium NKO Proyect",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -11,7 +11,12 @@
     "url": "git@github.com:nko4/machinarium.git"
   },
   "dependencies": {
-    "nko": "*"
+    "nko": "*",
+    "coffee-script": "*",
+    "express": "*",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*"
   },
   "engines": {
     "node": "0.10.x"

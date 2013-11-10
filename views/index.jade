@@ -1,0 +1,50 @@
+extends layout
+
+block content
+	#fb-root
+	script.
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));
+	#app
+		audio(autoplay='autoplay', loop='loop')
+			source(src='data/Andrey Avkhimovich Idiot Robot.ogg')
+	#video(style='width: 0; height: 0;')
+		video#webcam(autoplay='autoplay', width='640', height='480')
+		canvas#canvasSource(width='640', height='480')
+		canvas#canvasBlend(width='640', height='480' )
+	#modal
+		p#scoreText.head Thanks for Playing!!!
+		|If you want, you can share your score on Twitter, Share the game in FB and G+ or vote me for NKO 2013 winner:
+		ul
+			li
+				a#twitterLink(href='') Share your score in Twitter!
+		a(href="#") To play again only refresh the site
+		
+	#main
+		canvas#myCanvas(width='900px', height='600px')
+	#marker_score
+		h2#round
+		h2#score
+		p removes the blue aliens to earn points, at the end of the ten rounds you can share your final score for Twitter
+		ul
+			li
+				a.twitter-share-button(href="https://twitter.com/share" data-url="http://machinarium.2013.nodeknockout.com/" data-via="raaztux" data-hashtags="NKO")
+				p Share in Twitter
+			li
+				.fb-share-button(data-href="http://machinarium.2013.nodeknockout.com/" data-type="button_count")
+				p Share in Facebook
+			li
+				.g-plus(data-action="share" data-annotation="bubble" data-href="http://machinarium.2013.nodeknockout.com/")
+				p Share in G+
+			li 
+				iframe(src="http://nodeknockout.com/iframe/machinarium" frameborder=0 scrolling=no allowtransparency=true width=115 height=25)
+				p Vote me for NKO Popularity Winner
+	script(type="text/javascript" src="js/script.js")
+	script(type="text/javascript" src="https://apis.google.com/js/plusone.js")
+	script.
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

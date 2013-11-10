@@ -2,7 +2,7 @@
   "name": "Webcam_Space_Invaders",
   "version": "0.0.1",
   "description": "Machinarium NKO Proyect",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },

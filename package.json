@@ -4,7 +4,7 @@
   "description": "Machinarium NKO Proyect",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
